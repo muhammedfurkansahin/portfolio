@@ -227,6 +227,7 @@ h6,
         center center,
         center bottom;
     background-repeat: no-repeat;
+    background-size: auto, auto, auto, auto, auto, contain;
 }
 
 @media (max-width: 991.98px) {
@@ -520,7 +521,9 @@ h6,
         center top,
         center center;
     background-repeat: no-repeat;
+    background-size: contain, contain; /* Görsellerin genişliği tam ekran olacak */
 }
+
 
 .footer .btn.btn-social {
     margin-right: 5px;
