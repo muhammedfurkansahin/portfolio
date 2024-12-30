@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-//yorum
-//birleştirme örnek
 
 <head>
     <meta charset="utf-8">
@@ -47,7 +45,7 @@
 
 
         <!-- Navbar & Hero Start -->
-        <div class="container-fluid position-relative p-0">
+        <div class="container-fluid position-relative p-0" id="home">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
                     <h1 class="m-0">M. Furkan Şahin</h1>
@@ -58,22 +56,22 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About Me</a>
-                        <a href="service.html" class="nav-item nav-link">Knowledge</a>
-                        <a href="service.html" class="nav-item nav-link">Experience</a>
-                        <a href="project.html" class="nav-item nav-link">Projects</a>
+                        <a href="#home" class="nav-item nav-link active">Home</a>
+                        <a href="#about" class="nav-item nav-link">About Me</a>
+                        <a href="#experience" class="nav-item nav-link">Experience</a>
+                        <a href="#knowledge" class="nav-item nav-link">Knowledge</a>
+                        <a href="#projects" class="nav-item nav-link">Projects</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Extras</a>
                             <div class="dropdown-menu m-0">
-                                <a href="team.html" class="dropdown-item">Design</a>
-                                <a href="testimonial.html" class="dropdown-item">Article</a>
-                                <a href="idea.html" class="dropdown-item">Idea</a>
-                                <a href="404.html" class="dropdown-item">Experimental</a>
+                                <a href="#design" class="dropdown-item">Design</a>
+                                <a href="#article" class="dropdown-item">Article</a>
+                                <a href="#idea" class="dropdown-item">Idea</a>
+                                <a href="#experimental" class="dropdown-item">Experimental</a>
                                 
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="#contact" class="nav-item nav-link">Contact</a>
                     </div>
                     <a href="" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Resume (.pdf)</a>
                 </div>
@@ -85,7 +83,7 @@
                         <div class="col-lg-6 text-center text-lg-start">
                             <h1 class="text-white mb-4 animated slideInDown">Mobile Application Developer & Computer Engineer</h1>
                             <p class="text-white pb-3 animated slideInDown">As a computer engineer and mobile app developer, I specialize in cross-platform projects with Flutter. I am experienced in state management, API integrations, and MVC structures in mobile development. Embracing reusable and clean code principles, I create sustainable solutions for Android and iOS platforms.</p>
-                            <a href="" class="btn btn-secondary py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Read More</a>
+                            <button type="button" class="btn btn-secondary py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft" data-bs-toggle="modal" data-bs-target="#readMoreModal">Read More</button>
                         </div>
                         <div class="col-lg-6 text-center text-lg-start">
                             <img class="img-fluid animated zoomIn" src="img/hero.png" alt="">
@@ -102,21 +100,21 @@
             <div class="container py-5 px-lg-5">
                 <div class="row g-4">
                     <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="feature-item bg-light rounded text-center p-4">
+                        <div class="feature-item bg-light rounded text-center p-4" data-bs-toggle="modal" data-bs-target="#featureModal1" style="cursor: pointer;">
                             <i class="fa fa-3x fa-mail-bulk text-primary mb-4"></i>
                             <h5 class="mb-3">Digital Marketing</h5>
                             <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="feature-item bg-light rounded text-center p-4">
+                        <div class="feature-item bg-light rounded text-center p-4" data-bs-toggle="modal" data-bs-target="#featureModal2" style="cursor: pointer;">
                             <i class="fa fa-3x fa-search text-primary mb-4"></i>
                             <h5 class="mb-3">SEO & Backlinks</h5>
                             <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="feature-item bg-light rounded text-center p-4">
+                        <div class="feature-item bg-light rounded text-center p-4" data-bs-toggle="modal" data-bs-target="#featureModal3" style="cursor: pointer;">
                             <i class="fa fa-3x fa-laptop-code text-primary mb-4"></i>
                             <h5 class="mb-3">Design & Development</h5>
                             <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
@@ -127,9 +125,92 @@
         </div>
         <!-- Feature End -->
 
+        <!-- Feature Modals -->
+        <div class="modal fade" id="featureModal1" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Digital Marketing</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center mb-4">
+                            <i class="fa fa-3x fa-mail-bulk text-primary"></i>
+                        </div>
+                        <p>Detaylı Digital Marketing içeriği buraya gelecek...</p>
+                        <ul>
+                            <li>Sosyal Medya Yönetimi</li>
+                            <li>İçerik Pazarlama</li>
+                            <li>Email Marketing</li>
+                            <li>SEO Optimizasyonu</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                        <button type="button" class="btn btn-primary">Daha Fazla Bilgi</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="featureModal2" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">SEO & Backlinks</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center mb-4">
+                            <i class="fa fa-3x fa-search text-primary"></i>
+                        </div>
+                        <p>Detaylı SEO & Backlinks içeriği buraya gelecek...</p>
+                        <ul>
+                            <li>Anahtar Kelime Araştırması</li>
+                            <li>On-Page SEO</li>
+                            <li>Off-Page SEO</li>
+                            <li>Backlink Stratejileri</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                        <button type="button" class="btn btn-primary">Daha Fazla Bilgi</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="featureModal3" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Design & Development</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center mb-4">
+                            <i class="fa fa-3x fa-laptop-code text-primary"></i>
+                        </div>
+                        <p>Detaylı Design & Development içeriği buraya gelecek...</p>
+                        <ul>
+                            <li>Web Tasarım</li>
+                            <li>Mobil Uygulama Geliştirme</li>
+                            <li>UI/UX Tasarım</li>
+                            <li>Responsive Tasarım</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                        <button type="button" class="btn btn-primary">Daha Fazla Bilgi</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Feature Modals End -->
+
 
         <!-- About Start -->
-        <div class="container-fluid py-5">
+        <div class="container-fluid py-5" id="about">
             <div class="container py-5 px-lg-5">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -193,7 +274,7 @@
 
 
         <!-- Facts Start -->
-        <div class="container-fluid bg-primary fact py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container-fluid bg-primary fact py-5 wow fadeInUp" id="experience" data-wow-delay="0.1s">
             <div class="container py-5 px-lg-5">
                 <div class="row g-4">
                     <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
@@ -223,7 +304,7 @@
 
 
         <!-- Service Start -->
-        <div class="container-fluid py-5">
+        <div class="container-fluid py-5" id="knowledge">
             <div class="container py-5 px-lg-5">
                 <div class="wow fadeInUp" data-wow-delay="0.1s">
                     <p class="section-title text-secondary justify-content-center"><span></span>Our Services<span></span></p>
@@ -231,63 +312,63 @@
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item d-flex flex-column text-center rounded">
+                        <div class="service-item d-flex flex-column text-center rounded" data-bs-toggle="modal" data-bs-target="#serviceModal1" style="cursor: pointer;">
                             <div class="service-icon flex-shrink-0">
                                 <i class="fa fa-search fa-2x"></i>
                             </div>
                             <h5 class="mb-3">SEO Optimization</h5>
                             <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
+                            <a class="btn btn-square"><i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item d-flex flex-column text-center rounded">
+                        <div class="service-item d-flex flex-column text-center rounded" data-bs-toggle="modal" data-bs-target="#serviceModal2" style="cursor: pointer;">
                             <div class="service-icon flex-shrink-0">
                                 <i class="fa fa-laptop-code fa-2x"></i>
                             </div>
                             <h5 class="mb-3">Web Design</h5>
                             <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
+                            <a class="btn btn-square"><i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item d-flex flex-column text-center rounded">
+                        <div class="service-item d-flex flex-column text-center rounded" data-bs-toggle="modal" data-bs-target="#serviceModal3" style="cursor: pointer;">
                             <div class="service-icon flex-shrink-0">
                                 <i class="fab fa-facebook-f fa-2x"></i>
                             </div>
                             <h5 class="mb-3">Social Media Marketing</h5>
                             <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
+                            <a class="btn btn-square"><i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item d-flex flex-column text-center rounded">
+                        <div class="service-item d-flex flex-column text-center rounded" data-bs-toggle="modal" data-bs-target="#serviceModal4" style="cursor: pointer;">
                             <div class="service-icon flex-shrink-0">
                                 <i class="fa fa-mail-bulk fa-2x"></i>
                             </div>
                             <h5 class="mb-3">Email Marketing</h5>
                             <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
+                            <a class="btn btn-square"><i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item d-flex flex-column text-center rounded">
+                        <div class="service-item d-flex flex-column text-center rounded" data-bs-toggle="modal" data-bs-target="#serviceModal5" style="cursor: pointer;">
                             <div class="service-icon flex-shrink-0">
                                 <i class="fa fa-thumbs-up fa-2x"></i>
                             </div>
                             <h5 class="mb-3">PPC Advertising</h5>
                             <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
+                            <a class="btn btn-square"><i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item d-flex flex-column text-center rounded">
+                        <div class="service-item d-flex flex-column text-center rounded" data-bs-toggle="modal" data-bs-target="#serviceModal6" style="cursor: pointer;">
                             <div class="service-icon flex-shrink-0">
                                 <i class="fab fa-android fa-2x"></i>
                             </div>
                             <h5 class="mb-3">App Development</h5>
                             <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
+                            <a class="btn btn-square"><i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -295,12 +376,173 @@
         </div>
         <!-- Service End -->
 
+        <!-- Service Modals -->
+        <div class="modal fade" id="serviceModal1" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">SEO Optimization</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center mb-4">
+                            <i class="fa fa-search fa-3x text-primary"></i>
+                        </div>
+                        <p>Detaylı SEO Optimization hizmetleri...</p>
+                        <ul>
+                            <li>Anahtar Kelime Analizi</li>
+                            <li>Site İçi SEO</li>
+                            <li>Site Dışı SEO</li>
+                            <li>SEO Raporlama</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                        <button type="button" class="btn btn-primary">İletişime Geç</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        
+        <div class="modal fade" id="serviceModal2" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Web Design</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center mb-4">
+                            <i class="fa fa-laptop-code fa-3x text-primary"></i>
+                        </div>
+                        <p>Modern ve responsive web tasarım hizmetleri...</p>
+                        <ul>
+                            <li>Özel Tasarım</li>
+                            <li>Mobil Uyumlu</li>
+                            <li>Hızlı Yükleme</li>
+                            <li>SEO Dostu</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                        <button type="button" class="btn btn-primary">İletişime Geç</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="serviceModal3" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Social Media Marketing</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center mb-4">
+                            <i class="fab fa-facebook-f fa-3x text-primary"></i>
+                        </div>
+                        <p>Sosyal medya pazarlama stratejileri...</p>
+                        <ul>
+                            <li>İçerik Yönetimi</li>
+                            <li>Topluluk Yönetimi</li>
+                            <li>Reklam Yönetimi</li>
+                            <li>Analiz ve Raporlama</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                        <button type="button" class="btn btn-primary">İletişime Geç</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="serviceModal4" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Email Marketing</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center mb-4">
+                            <i class="fa fa-mail-bulk fa-3x text-primary"></i>
+                        </div>
+                        <p>Etkili email pazarlama çözümleri...</p>
+                        <ul>
+                            <li>Newsletter Tasarımı</li>
+                            <li>Otomatik Pazarlama</li>
+                            <li>A/B Testleri</li>
+                            <li>Performans Analizi</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                        <button type="button" class="btn btn-primary">İletişime Geç</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="serviceModal5" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">PPC Advertising</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center mb-4">
+                            <i class="fa fa-thumbs-up fa-3x text-primary"></i>
+                        </div>
+                        <p>Tıklama başına ödeme reklamcılığı...</p>
+                        <ul>
+                            <li>Google Ads</li>
+                            <li>Facebook Ads</li>
+                            <li>Remarketing</li>
+                            <li>Conversion Tracking</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                        <button type="button" class="btn btn-primary">İletişime Geç</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="serviceModal6" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">App Development</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center mb-4">
+                            <i class="fab fa-android fa-3x text-primary"></i>
+                        </div>
+                        <p>Mobil uygulama geliştirme hizmetleri...</p>
+                        <ul>
+                            <li>Native Uygulamalar</li>
+                            <li>Cross-Platform</li>
+                            <li>UI/UX Tasarım</li>
+                            <li>Bakım ve Destek</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                        <button type="button" class="btn btn-primary">İletişime Geç</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service Modals End -->
 
 
         <!-- Projects Start -->
-        <div class="container-fluid py-5">
+        <div class="container-fluid py-5" id="projects">
             <div class="container py-5 px-lg-5">
                 <div class="wow fadeInUp" data-wow-delay="0.1s">
                     <p class="section-title text-secondary justify-content-center"><span></span>Our Projects<span></span></p>
@@ -452,7 +694,7 @@
 
 
         <!-- Team Start -->
-        <div class="container-fluid py-5">
+        <div class="container-fluid py-5" id="design">
             <div class="container py-5 px-lg-5">
                 <div class="wow fadeInUp" data-wow-delay="0.1s">
                     <p class="section-title text-secondary justify-content-center"><span></span>Our Team<span></span></p>
@@ -511,7 +753,7 @@
         
 
         <!-- Footer Start -->
-        <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
+        <div class="container-fluid bg-primary text-light footer wow fadeIn" id="contact" data-wow-delay="0.1s">
             <div class="container py-5 px-lg-5">
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-3">
@@ -590,6 +832,53 @@
         </div>
         <!-- Footer End -->
 
+        <!-- Read More Modal -->
+        <div class="modal fade" id="readMoreModal" tabindex="-1" aria-labelledby="readMoreModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="readMoreModalLabel">Hakkımda Daha Fazla Bilgi</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h4>Eğitim</h4>
+                                    <p>Buraya eğitim bilgileriniz gelecek</p>
+                                    
+                                    <h4>Yetenekler</h4>
+                                    <p>Buraya yetenekleriniz gelecek</p>
+                                    
+                                    <h4>İlgi Alanları</h4>
+                                    <p>Buraya ilgi alanlarınız gelecek</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h4>Deneyim</h4>
+                                    <p>Buraya iş deneyimleriniz gelecek</p>
+                                    
+                                    <h4>Sertifikalar</h4>
+                                    <p>Buraya sertifikalarınız gelecek</p>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-12 text-center">
+                                    <h4>CV'mi İndirin</h4>
+                                    <p>Detaylı özgeçmişimi PDF formatında indirebilirsiniz.</p>
+                                    <a href="path/to/your/cv.pdf" class="btn btn-primary" download>
+                                        <i class="fas fa-download me-2"></i>CV'mi İndir (PDF)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Read More Modal End -->
 
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>

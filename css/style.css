@@ -592,3 +592,46 @@ h6,
 .footer .footer-menu a:hover {
     color: var(--secondary);
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+.modal-content {
+    border-radius: 15px;
+    border: none;
+}
+
+.modal-header {
+    background-color: var(--primary);
+    color: #fff;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.modal-header .btn-close {
+    color: #fff;
+    opacity: 1;
+}
+
+.modal h4 {
+    color: var(--primary);
+    margin-top: 1.5rem;
+    font-weight: 600;
+}
+
+.modal h4:first-child {
+    margin-top: 0;
+}
+
+.modal .btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    padding: 10px 25px;
+    transition: all 0.3s;
+}
+
+.modal .btn-primary:hover {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+}
