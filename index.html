@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="tr" data-theme="light">
 
 <head>
     <meta charset="utf-8">
-    <title>DGital - Digital Agency HTML Template</title>
+    <title>M. Furkan Şahin | Mobil Uygulama Geliştirici & Bilgisayar Mühendisi</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="Mobil Uygulama Geliştirici, Flutter Geliştirici, Bilgisayar Mühendisi, CV, Özgeçmiş" name="keywords">
+    <meta content="M. Furkan Şahin - Deneyimli Mobil Uygulama Geliştirici ve Bilgisayar Mühendisi Profesyonel Özgeçmişi" name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -15,11 +14,11 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
@@ -31,872 +30,777 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Chart.js için -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
-    <div class="container-fluid bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
+    <!-- Preloader Start -->
+    <div id="preloader">
+        <div class="loader">
+            <svg viewBox="0 0 80 80">
+                <circle id="loader-circle" cx="40" cy="40" r="32"></circle>
+            </svg>
         </div>
-        <!-- Spinner End -->
-
-
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid position-relative p-0" id="home">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                    <h1 class="m-0">M. Furkan Şahin</h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav mx-auto py-0">
-                        <a href="#home" class="nav-item nav-link active">Home</a>
-                        <a href="#about" class="nav-item nav-link">About Me</a>
-                        <a href="#experience" class="nav-item nav-link">Experience</a>
-                        <a href="#knowledge" class="nav-item nav-link">Knowledge</a>
-                        <a href="#projects" class="nav-item nav-link">Projects</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Extras</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="#design" class="dropdown-item">Design</a>
-                                <a href="#article" class="dropdown-item">Article</a>
-                                <a href="#idea" class="dropdown-item">Idea</a>
-                                <a href="#experimental" class="dropdown-item">Experimental</a>
-                                
-                            </div>
-                        </div>
-                        <a href="#contact" class="nav-item nav-link">Contact</a>
-                    </div>
-                    <a href="" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Resume (.pdf)</a>
-                </div>
-            </nav>
-
-            <div class="container-fluid bg-primary hero-header">
-                <div class="container px-lg-5">
-                    <div class="row g-5 align-items-end">
-                        <div class="col-lg-6 text-center text-lg-start">
-                            <h1 class="text-white mb-4 animated slideInDown">Mobile Application Developer & Computer Engineer</h1>
-                            <p class="text-white pb-3 animated slideInDown">As a computer engineer and mobile app developer, I specialize in cross-platform projects with Flutter. I am experienced in state management, API integrations, and MVC structures in mobile development. Embracing reusable and clean code principles, I create sustainable solutions for Android and iOS platforms.</p>
-                            <button type="button" class="btn btn-secondary py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft" data-bs-toggle="modal" data-bs-target="#readMoreModal">Read More</button>
-                        </div>
-                        <div class="col-lg-6 text-center text-lg-start">
-                            <img class="img-fluid animated zoomIn" src="img/hero.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Navbar & Hero End -->
-
-
-        <!-- Feature Start -->
-        <div class="container-fluid py-5">
-            <div class="container py-5 px-lg-5">
-                <div class="row g-4">
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="feature-item bg-light rounded text-center p-4" data-bs-toggle="modal" data-bs-target="#featureModal1" style="cursor: pointer;">
-                            <i class="fa fa-3x fa-mail-bulk text-primary mb-4"></i>
-                            <h5 class="mb-3">Digital Marketing</h5>
-                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="feature-item bg-light rounded text-center p-4" data-bs-toggle="modal" data-bs-target="#featureModal2" style="cursor: pointer;">
-                            <i class="fa fa-3x fa-search text-primary mb-4"></i>
-                            <h5 class="mb-3">SEO & Backlinks</h5>
-                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="feature-item bg-light rounded text-center p-4" data-bs-toggle="modal" data-bs-target="#featureModal3" style="cursor: pointer;">
-                            <i class="fa fa-3x fa-laptop-code text-primary mb-4"></i>
-                            <h5 class="mb-3">Design & Development</h5>
-                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Feature End -->
-
-        <!-- Feature Modals -->
-        <div class="modal fade" id="featureModal1" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Digital Marketing</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center mb-4">
-                            <i class="fa fa-3x fa-mail-bulk text-primary"></i>
-                        </div>
-                        <p>Detaylı Digital Marketing içeriği buraya gelecek...</p>
-                        <ul>
-                            <li>Sosyal Medya Yönetimi</li>
-                            <li>İçerik Pazarlama</li>
-                            <li>Email Marketing</li>
-                            <li>SEO Optimizasyonu</li>
-                        </ul>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
-                        <button type="button" class="btn btn-primary">Daha Fazla Bilgi</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="featureModal2" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">SEO & Backlinks</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center mb-4">
-                            <i class="fa fa-3x fa-search text-primary"></i>
-                        </div>
-                        <p>Detaylı SEO & Backlinks içeriği buraya gelecek...</p>
-                        <ul>
-                            <li>Anahtar Kelime Araştırması</li>
-                            <li>On-Page SEO</li>
-                            <li>Off-Page SEO</li>
-                            <li>Backlink Stratejileri</li>
-                        </ul>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
-                        <button type="button" class="btn btn-primary">Daha Fazla Bilgi</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="featureModal3" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Design & Development</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center mb-4">
-                            <i class="fa fa-3x fa-laptop-code text-primary"></i>
-                        </div>
-                        <p>Detaylı Design & Development içeriği buraya gelecek...</p>
-                        <ul>
-                            <li>Web Tasarım</li>
-                            <li>Mobil Uygulama Geliştirme</li>
-                            <li>UI/UX Tasarım</li>
-                            <li>Responsive Tasarım</li>
-                        </ul>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
-                        <button type="button" class="btn btn-primary">Daha Fazla Bilgi</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Feature Modals End -->
-
-
-        <!-- About Start -->
-        <div class="container-fluid py-5" id="about">
-            <div class="container py-5 px-lg-5">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <p class="section-title text-secondary">Programming Language</p>
-                        <h1 class="mb-5">My programming langugage skills</h1>
-                        <p class="mb-4">These are my competencies in programming languages. You can find more on the knowledge page.</p>
-                        <div class="skill mb-4">
-                            <div class="d-flex justify-content-between">
-                                <p class="mb-2">Flutter</p>
-                                <p class="mb-2">85%</p>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="skill mb-4">
-                            <div class="d-flex justify-content-between">
-                                <p class="mb-2">Python</p>
-                                <p class="mb-2">65%</p>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar bg-secondary" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="skill mb-4">
-                            <div class="d-flex justify-content-between">
-                                <p class="mb-2">C</p>
-                                <p class="mb-2">85%</p>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="skill mb-4">
-                            <div class="d-flex justify-content-between">
-                                <p class="mb-2">Java</p>
-                                <p class="mb-2">60%</p>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar bg-gradient" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="skill mb-4">
-                            <div class="d-flex justify-content-between">
-                                <p class="mb-2">SQL</p>
-                                <p class="mb-2">90%</p>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <a href="" class="btn btn-primary py-sm-3 px-sm-5 rounded-pill mt-3">Read More</a>
-                    </div>
-                    <div class="col-lg-6">
-                        <img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="img/about.png">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- About End -->
-
-
-        <!-- Facts Start -->
-        <div class="container-fluid bg-primary fact py-5 wow fadeInUp" id="experience" data-wow-delay="0.1s">
-            <div class="container py-5 px-lg-5">
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
-                        <i class="fa fa-certificate fa-3x text-secondary mb-3"></i>
-                        <h1 class="text-white mb-2" data-toggle="counter-up">2</h1>
-                        <p class="text-white mb-0">Years Experience</p>
-                    </div>
-                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
-                        <i class="fa fa-users-cog fa-3x text-secondary mb-3"></i>
-                        <h1 class="text-white mb-2" data-toggle="counter-up">12</h1>
-                        <p class="text-white mb-0">Projects</p>
-                    </div>
-                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
-                        <i class="fa fa-users fa-3x text-secondary mb-3"></i>
-                        <h1 class="text-white mb-2" data-toggle="counter-up">8</h1>
-                        <p class="text-white mb-0">Programming Language</p>
-                    </div>
-                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
-                        <i class="fa fa-check fa-3x text-secondary mb-3"></i>
-                        <h1 class="text-white mb-2" data-toggle="counter-up">34</h1>
-                        <p class="text-white mb-0">Skills</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Facts End -->
-
-
-        <!-- Service Start -->
-        <div class="container-fluid py-5" id="knowledge">
-            <div class="container py-5 px-lg-5">
-                <div class="wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="section-title text-secondary justify-content-center"><span></span>Our Services<span></span></p>
-                    <h1 class="text-center mb-5">What Solutions I Provide</h1>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item d-flex flex-column text-center rounded" data-bs-toggle="modal" data-bs-target="#serviceModal1" style="cursor: pointer;">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-search fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">SEO Optimization</h5>
-                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            <a class="btn btn-square"><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item d-flex flex-column text-center rounded" data-bs-toggle="modal" data-bs-target="#serviceModal2" style="cursor: pointer;">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-laptop-code fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Web Design</h5>
-                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            <a class="btn btn-square"><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item d-flex flex-column text-center rounded" data-bs-toggle="modal" data-bs-target="#serviceModal3" style="cursor: pointer;">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fab fa-facebook-f fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Social Media Marketing</h5>
-                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            <a class="btn btn-square"><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item d-flex flex-column text-center rounded" data-bs-toggle="modal" data-bs-target="#serviceModal4" style="cursor: pointer;">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-mail-bulk fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Email Marketing</h5>
-                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            <a class="btn btn-square"><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item d-flex flex-column text-center rounded" data-bs-toggle="modal" data-bs-target="#serviceModal5" style="cursor: pointer;">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-thumbs-up fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">PPC Advertising</h5>
-                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            <a class="btn btn-square"><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item d-flex flex-column text-center rounded" data-bs-toggle="modal" data-bs-target="#serviceModal6" style="cursor: pointer;">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fab fa-android fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">App Development</h5>
-                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            <a class="btn btn-square"><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Service End -->
-
-        <!-- Service Modals -->
-        <div class="modal fade" id="serviceModal1" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">SEO Optimization</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center mb-4">
-                            <i class="fa fa-search fa-3x text-primary"></i>
-                        </div>
-                        <p>Detaylı SEO Optimization hizmetleri...</p>
-                        <ul>
-                            <li>Anahtar Kelime Analizi</li>
-                            <li>Site İçi SEO</li>
-                            <li>Site Dışı SEO</li>
-                            <li>SEO Raporlama</li>
-                        </ul>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
-                        <button type="button" class="btn btn-primary">İletişime Geç</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="serviceModal2" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Web Design</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center mb-4">
-                            <i class="fa fa-laptop-code fa-3x text-primary"></i>
-                        </div>
-                        <p>Modern ve responsive web tasarım hizmetleri...</p>
-                        <ul>
-                            <li>Özel Tasarım</li>
-                            <li>Mobil Uyumlu</li>
-                            <li>Hızlı Yükleme</li>
-                            <li>SEO Dostu</li>
-                        </ul>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
-                        <button type="button" class="btn btn-primary">İletişime Geç</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="serviceModal3" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Social Media Marketing</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center mb-4">
-                            <i class="fab fa-facebook-f fa-3x text-primary"></i>
-                        </div>
-                        <p>Sosyal medya pazarlama stratejileri...</p>
-                        <ul>
-                            <li>İçerik Yönetimi</li>
-                            <li>Topluluk Yönetimi</li>
-                            <li>Reklam Yönetimi</li>
-                            <li>Analiz ve Raporlama</li>
-                        </ul>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
-                        <button type="button" class="btn btn-primary">İletişime Geç</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="serviceModal4" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Email Marketing</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center mb-4">
-                            <i class="fa fa-mail-bulk fa-3x text-primary"></i>
-                        </div>
-                        <p>Etkili email pazarlama çözümleri...</p>
-                        <ul>
-                            <li>Newsletter Tasarımı</li>
-                            <li>Otomatik Pazarlama</li>
-                            <li>A/B Testleri</li>
-                            <li>Performans Analizi</li>
-                        </ul>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
-                        <button type="button" class="btn btn-primary">İletişime Geç</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="serviceModal5" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">PPC Advertising</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center mb-4">
-                            <i class="fa fa-thumbs-up fa-3x text-primary"></i>
-                        </div>
-                        <p>Tıklama başına ödeme reklamcılığı...</p>
-                        <ul>
-                            <li>Google Ads</li>
-                            <li>Facebook Ads</li>
-                            <li>Remarketing</li>
-                            <li>Conversion Tracking</li>
-                        </ul>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
-                        <button type="button" class="btn btn-primary">İletişime Geç</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="serviceModal6" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">App Development</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center mb-4">
-                            <i class="fab fa-android fa-3x text-primary"></i>
-                        </div>
-                        <p>Mobil uygulama geliştirme hizmetleri...</p>
-                        <ul>
-                            <li>Native Uygulamalar</li>
-                            <li>Cross-Platform</li>
-                            <li>UI/UX Tasarım</li>
-                            <li>Bakım ve Destek</li>
-                        </ul>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
-                        <button type="button" class="btn btn-primary">İletişime Geç</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Service Modals End -->
-
-
-        <!-- Projects Start -->
-        <div class="container-fluid py-5" id="projects">
-            <div class="container py-5 px-lg-5">
-                <div class="wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="section-title text-secondary justify-content-center"><span></span>Our Projects<span></span></p>
-                    <h1 class="text-center mb-5">Recently Completed Projects</h1>
-                </div>
-                <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="col-12 text-center">
-                        <ul class="list-inline mb-5" id="portfolio-flters">
-                            <li class="mx-2 active" data-filter="*">All</li>
-                            <li class="mx-2" data-filter=".first">Web Design</li>
-                            <li class="mx-2" data-filter=".second">Graphic Design</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row g-4 portfolio-container">
-                    <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/portfolio-1.jpg" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">UI / UX Design</p>
-                                <h5 class="lh-base mb-0">Digital Agency Website Design And Development</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/portfolio-2.jpg" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">UI / UX Design</p>
-                                <h5 class="lh-base mb-0">Digital Agency Website Design And Development</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/portfolio-3.jpg" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">UI / UX Design</p>
-                                <h5 class="lh-base mb-0">Digital Agency Website Design And Development</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/portfolio-4.jpg" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-4.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">UI / UX Design</p>
-                                <h5 class="lh-base mb-0">Digital Agency Website Design And Development</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/portfolio-5.jpg" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-5.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">UI / UX Design</p>
-                                <h5 class="lh-base mb-0">Digital Agency Website Design And Development</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/portfolio-6.jpg" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-6.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">UI / UX Design</p>
-                                <h5 class="lh-base mb-0">Digital Agency Website Design And Development</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Projects End -->
-
-
-        <!-- Testimonial Start -->
-        <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="container py-5 px-lg-5">
-                <p class="section-title text-secondary justify-content-center"><span></span>Testimonial<span></span></p>
-                <h1 class="text-center mb-5">Aphorisms</h1>
-                <div class="owl-carousel testimonial-carousel">
-                    <div class="testimonial-item bg-light rounded my-4">
-                        <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>The best time to plant trees was 20 years ago. The second best time is now.</p>
-                        <div class="d-flex align-items-center">
-                            <div class="ps-4">
-                                <h5 class="mb-1">Chinese Wiseman</h5>
-                                <span>Unknown</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item bg-light rounded my-4">
-                        <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Kimden sual ettiysem halimi güldüler. Anam bile şiir yazdığım için bakmadı yüzüme. Yalnız bir öğle üstü sofrada ölüm mukaddermiş dedi  Halbuki yaşamak alnımın yazısı...</p>
-                        <div class="d-flex align-items-center">
-                            <div class="ps-4">
-                                <h5 class="mb-1">Rüştü Onur</h5>
-                                <span>Poet</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item bg-light rounded my-4">
-                        <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>If I say I am good, it would be a lie, if I say I am bad, it would touch my faith. I'd better give thanks, maybe then my heart will be saved.</p>
-                        <div class="d-flex align-items-center">
-                            <div class="ps-4">
-                                <h5 class="mb-1">Mevlana Celaleddin Rumi</h5>
-                                <span>Sufi Philosopher</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Testimonial End -->
-
-
-        <!-- Team Start -->
-        <div class="container-fluid py-5" id="design">
-            <div class="container py-5 px-lg-5">
-                <div class="wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="section-title text-secondary justify-content-center"><span></span>Our Team<span></span></p>
-                    <h1 class="text-center mb-5">Our Team Members</h1>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="team-item bg-light rounded">
-                            <div class="text-center border-bottom p-4">
-                                <img class="img-fluid rounded-circle mb-4" src="img/team-1.jpg" alt="">
-                                <h5>John Doe</h5>
-                                <span>CEO & Founder</span>
-                            </div>
-                            <div class="d-flex justify-content-center p-4">
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="team-item bg-light rounded">
-                            <div class="text-center border-bottom p-4">
-                                <img class="img-fluid rounded-circle mb-4" src="img/team-2.jpg" alt="">
-                                <h5>Jessica Brown</h5>
-                                <span>Web Designer</span>
-                            </div>
-                            <div class="d-flex justify-content-center p-4">
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="team-item bg-light rounded">
-                            <div class="text-center border-bottom p-4">
-                                <img class="img-fluid rounded-circle mb-4" src="img/team-3.jpg" alt="">
-                                <h5>Tony Johnson</h5>
-                                <span>SEO Expert</span>
-                            </div>
-                            <div class="d-flex justify-content-center p-4">
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Team End -->
-        
-
-        <!-- Footer Start -->
-        <div class="container-fluid bg-primary text-light footer wow fadeIn" id="contact" data-wow-delay="0.1s">
-            <div class="container py-5 px-lg-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Address<span></span></p>
-                        <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                        <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                        <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Quick Link<span></span></p>
-                        <a class="btn btn-link" href="">About Us</a>
-                        <a class="btn btn-link" href="">Contact Us</a>
-                        <a class="btn btn-link" href="">Privacy Policy</a>
-                        <a class="btn btn-link" href="">Terms & Condition</a>
-                        <a class="btn btn-link" href="">Career</a>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Gallery<span></span></p>
-                        <div class="row g-2">
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/portfolio-1.jpg" alt="Image">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/portfolio-2.jpg" alt="Image">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/portfolio-3.jpg" alt="Image">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/portfolio-4.jpg" alt="Image">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/portfolio-5.jpg" alt="Image">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/portfolio-6.jpg" alt="Image">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Newsletter<span></span></p>
-                        <p>Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulpu</p>
-                        <div class="position-relative w-100 mt-3">
-                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
-                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container px-lg-5">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
-							
-							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-							Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
-                        </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="">Home</a>
-                                <a href="">Cookies</a>
-                                <a href="">Help</a>
-                                <a href="">FQAs</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
-
-        <!-- Read More Modal -->
-        <div class="modal fade" id="readMoreModal" tabindex="-1" aria-labelledby="readMoreModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="readMoreModalLabel">Hakkımda Daha Fazla Bilgi</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h4>Eğitim</h4>
-                                    <p>Buraya eğitim bilgileriniz gelecek</p>
-                                    
-                                    <h4>Yetenekler</h4>
-                                    <p>Buraya yetenekleriniz gelecek</p>
-                                    
-                                    <h4>İlgi Alanları</h4>
-                                    <p>Buraya ilgi alanlarınız gelecek</p>
-                                </div>
-                                <div class="col-md-6">
-                                    <h4>Deneyim</h4>
-                                    <p>Buraya iş deneyimleriniz gelecek</p>
-                                    
-                                    <h4>Sertifikalar</h4>
-                                    <p>Buraya sertifikalarınız gelecek</p>
-                                </div>
-                            </div>
-                            <div class="row mt-4">
-                                <div class="col-12 text-center">
-                                    <h4>CV'mi İndirin</h4>
-                                    <p>Detaylı özgeçmişimi PDF formatında indirebilirsiniz.</p>
-                                    <a href="path/to/your/cv.pdf" class="btn btn-primary" download>
-                                        <i class="fas fa-download me-2"></i>CV'mi İndir (PDF)
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Read More Modal End -->
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
+    <!-- Preloader End -->
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Header Start -->
+    <header id="header" class="header fixed-top">
+        <div class="container">
+            <div class="header-inner d-flex align-items-center justify-content-between">
+                <a href="index.html" class="logo">
+                    <h1 class="fw-bold m-0">M. FURKAN <span class="text-primary">ŞAHİN</span></h1>
+                </a>
+                <nav class="navbar">
+                    <ul class="navbar-nav ms-auto py-0 d-flex flex-row">
+                        <li class="nav-item"><a class="nav-link active" href="#home">Ana Sayfa</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">Hakkımda</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#resume">Özgeçmiş</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portföy</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#skills">Yetenekler</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">İletişim</a></li>
+                    </ul>
+                    <a href="#" class="btn btn-primary rounded-pill ms-3 d-none d-lg-block">CV İndir</a>
+                </nav>
+                <div class="header-toggle">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav ms-auto py-0">
+                            <li class="nav-item"><a class="nav-link active" href="#home">Ana Sayfa</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#about">Hakkımda</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#resume">Özgeçmiş</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#portfolio">Portföy</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#skills">Yetenekler</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#contact">İletişim</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+    <!-- Tema Değiştirme Butonu -->
+    <div class="theme-switcher" id="themeSwitcher">
+        <i class="fas fa-moon"></i>
+    </div>
+    <!-- Hero Section Start -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 order-lg-1 order-2">
+                    <div class="hero-content">
+                        <h4 class="text-primary mb-2 text-uppercase animated fadeInUp">Merhaba İnsan Kaynakları Uzmanı</h4>
+                        <h1 class="mb-4 animated fadeInUp">Ben <span class="text-primary fw-bold">Furkan</span>, Mobil Uygulama Geliştirici</h1>
+                        <p class="lead mb-4 animated fadeInUp">Flutter uzmanı olarak <span class="fw-bold text-dark">cross-platform mobil uygulama</span> geliştirmede ihtiyaçlarınıza yönelik çözümler sunuyorum. <span class="fw-bold text-dark">3+ yıl deneyimli</span> bir geliştirici olarak ekibinize hemen katkı sağlayabilirim.</p>
+                        <div class="hero-btns animated fadeInUp">
+                            <a href="#contact" class="btn btn-primary me-3 rounded-pill">İletişime Geç</a>
+                            <a href="#resume" class="btn btn-outline-primary rounded-pill">Özgeçmişim</a>
+                        </div>
+                        <div class="mt-5 d-flex gap-3 animated fadeInUp delay-1">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-link"><i class="fa fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 order-lg-2 order-1 mb-lg-0 mb-5">
+                    <div class="hero-image">
+                        <img src="img/hero.png" alt="M. Furkan Şahin" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- About Section Start -->
+    <section id="about" class="about py-6">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-image">
+                        <img src="img/about.png" alt="About Image" class="img-fluid rounded-3">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="section-title">
+                        <h2 class="text-dark">Hakkımda</h2>
+                        <div class="title-bg"></div>
+                    </div>
+                    <h3 class="mb-4">Mobil Uygulama Geliştirmede Uzman, <span class="text-primary">Ekip Çalışmasına Uyumlu</span></h3>
+                    <p class="text-muted mb-4">Flutter ile cross-platform uygulama geliştirmede uzmanlaşmış bir bilgisayar mühendisiyim. Son teknolojileri yakından takip ediyor, temiz kod yazma prensiplerine bağlı kalıyorum.</p>
+                    
+                    <div class="row g-4 mb-4">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-primary me-3"></i>
+                                <p class="mb-0">Flutter ve Dart Uzmanlığı</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-primary me-3"></i>
+                                <p class="mb-0">State Management (Provider, BLoC)</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-primary me-3"></i>
+                                <p class="mb-0">RESTful API Entegrasyonu</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-primary me-3"></i>
+                                <p class="mb-0">Firebase ve Backend Hizmetleri</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-primary me-3"></i>
+                                <p class="mb-0">UI/UX Tasarım İlkeleri</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-primary me-3"></i>
+                                <p class="mb-0">Agile/Scrum Metodolojisi</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row g-4 mb-3">
+                        <div class="col-sm-6">
+                            <div class="personal-item">
+                                <h6 class="text-dark">Ad Soyad:</h6>
+                                <p>M. Furkan Şahin</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="personal-item">
+                                <h6 class="text-dark">E-posta:</h6>
+                                <p>info@furkan.com</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="personal-item">
+                                <h6 class="text-dark">Telefon:</h6>
+                                <p>+90 555 123 4567</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="personal-item">
+                                <h6 class="text-dark">Konum:</h6>
+                                <p>İstanbul, Türkiye</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#resume" class="btn btn-primary rounded-pill">Özgeçmişim</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Resume Section Start -->
+    <section id="resume" class="resume py-6 bg-light">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2 class="text-dark">Özgeçmişim</h2>
+                <div class="title-bg"></div>
+                <p class="text-muted">Profesyonel deneyimim, eğitimim ve sertifikalarım</p>
+            </div>
+            
+            <!-- Öğrenme Yolculuğu Grafiği -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10">
+                    <div class="timeline-container">
+                        <h4 class="text-center mb-4">Öğrenme Yolculuğum</h4>
+                        <canvas id="learningTimelineChart" width="800" height="250"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <!-- Eğitim Bölümü -->
+                <div class="col-lg-6">
+                    <h3 class="resume-title">Eğitim</h3>
+                    
+                    <div class="resume-item">
+                        <h4>Bilgisayar Mühendisliği Lisans</h4>
+                        <h5>2016 - 2020</h5>
+                        <p class="resume-place"><i class="fas fa-university me-2"></i>ABC Üniversitesi</p>
+                        <p class="text-muted">Lisans eğitimimi yüksek başarı ortalamasıyla tamamladım. Öğreninim sürecimde mobil uygulama geliştirme, algoritma tasarımı ve yazılım mühendisliği konularına odaklandım.</p>
+                        
+                        <!-- Ders Tamamlama Grafiği -->
+                        <div class="course-chart-container mt-4">
+                            <h5 class="text-dark mb-3">Ders Tamamlama Oranı</h5>
+                            <canvas id="courseCompletionChart" width="400" height="200"></canvas>
+                        </div>
+                    </div>
+                    
+                    <h3 class="resume-title mt-5">Sertifikalar</h3>
+                    
+                    <div class="resume-item">
+                        <h4>Flutter Gelişmiş Uygulama Geliştirme</h4>
+                        <h5>2021</h5>
+                        <p class="resume-place"><i class="fas fa-certificate me-2"></i>Google Developers</p>
+                        <div class="certificate-badge">
+                            <i class="fab fa-google"></i>
+                            <span>Flutter Certified</span>
+                        </div>
+                    </div>
+                    
+                    <div class="resume-item">
+                        <h4>Agile ve Scrum Metodolojisi</h4>
+                        <h5>2022</h5>
+                        <p class="resume-place"><i class="fas fa-certificate me-2"></i>Scrum Alliance</p>
+                        <div class="certificate-badge">
+                            <i class="fas fa-users-cog"></i>
+                            <span>Agile Practitioner</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Deneyim Bölümü -->
+                <div class="col-lg-6">
+                    <h3 class="resume-title">Profesyonel Deneyim</h3>
+                    
+                    <div class="resume-item">
+                        <h4>Senior Mobil Uygulama Geliştirici</h4>
+                        <h5>2022 - Günümüz</h5>
+                        <p class="resume-place"><i class="fas fa-building me-2"></i>XYZ Teknoloji A.Ş.</p>
+                        
+                        <!-- Proje Başarı Oranları Grafiği -->
+                        <div class="project-success-container mb-4">
+                            <h5 class="text-dark mb-3">Proje Başarı Oranları</h5>
+                            <canvas id="projectSuccessChart" width="400" height="200"></canvas>
+                        </div>
+                        
+                        <p class="fw-bold text-dark mb-0">Başarılar:</p>
+                        <div class="achievements-container">
+                            <div class="achievement-item">
+                                <div class="achievement-icon">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                </div>
+                                <div class="achievement-info">
+                                    <h5>Performans Artışı</h5>
+                                    <div class="achievement-progress-container">
+                                        <div class="achievement-progress" data-value="40%"></div>
+                                    </div>
+                                    <span>%40 Artış</span>
+                                </div>
+                            </div>
+                            <div class="achievement-item">
+                                <div class="achievement-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="achievement-info">
+                                    <h5>Test Kapsamı</h5>
+                                    <div class="achievement-progress-container">
+                                        <div class="achievement-progress" data-value="95%"></div>
+                                    </div>
+                                    <span>%95 Seviye</span>
+                                </div>
+                            </div>
+                            <div class="achievement-item">
+                                <div class="achievement-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <div class="achievement-info">
+                                    <h5>Deployment Süresi</h5>
+                                    <div class="achievement-progress-container">
+                                        <div class="achievement-progress decrease" data-value="90%"></div>
+                                    </div>
+                                    <span>%90 Azalma</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Resume Section End -->
+
+    <!-- Skills Section Start -->
+    <section id="skills" class="skills py-6 bg-light">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Becerilerim</h2>
+                <span class="title-bg"></span>
+                <p>Mobil uygulama geliştirme ve yazılım mühendisliği alanlarındaki teknik ve kişisel becerilerim.</p>
+            </div>
+            <div class="row">
+                <!-- Teknik Beceriler Grafik -->
+                <div class="col-lg-6 mb-4">
+                    <div class="skills-title">
+                        <h3>Teknik Beceriler</h3>
+                    </div>
+                    <div class="skill-visualization">
+                        <canvas id="technicalSkillsChart" width="400" height="300"></canvas>
+                    </div>
+                </div>
+                <!-- Kişisel Beceriler Grafik -->
+                <div class="col-lg-6 mb-4">
+                    <div class="skills-title">
+                        <h3>Kişisel Beceriler</h3>
+                    </div>
+                    <div class="skill-visualization">
+                        <canvas id="personalSkillsChart" width="400" height="300"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-6 mb-4">
+                    <div class="skills-title">
+                        <h3>Programlama Becerileri</h3>
+                    </div>
+                    <!-- Mevcut yetenek çubukları -->
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <div class="skill-name">Flutter & Dart</div>
+                            <div class="skill-percentage">95%</div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <div class="skill-name">Kotlin</div>
+                            <div class="skill-percentage">90%</div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <div class="skill-name">Swift</div>
+                            <div class="skill-percentage">85%</div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <div class="skill-name">JavaScript</div>
+                            <div class="skill-percentage">75%</div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <div class="skill-name">C/C++</div>
+                            <div class="skill-percentage">80%</div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="skills-title">
+                        <h3>Teknoloji Deneyimim</h3>
+                    </div>
+                    <div class="technology-experience">
+                        <canvas id="techExperienceChart" width="400" height="300"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <div class="skills-title">
+                        <h3>Proje Başarı Oranları</h3>
+                    </div>
+                    <div class="project-success-rates">
+                        <canvas id="projectSuccessChart" width="800" height="250"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <div class="timeline-container">
+                        <h3 class="skills-title">Öğrenme Yolculuğum</h3>
+                        <div class="learning-timeline">
+                            <canvas id="learningTimelineChart" width="800" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Skills Section End -->
+
+    <!-- Portfolio Section Start -->
+    <section id="portfolio" class="portfolio py-6 bg-light">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2 class="text-dark">Portföy</h2>
+                <div class="title-bg"></div>
+                <p class="text-muted">Geliştirdiğim öne çıkan projeler ve uygulamalar</p>
+            </div>
+            
+            <!-- Stats Overview -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10">
+                    <div class="row g-4">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="portfolio-stat">
+                                <div class="portfolio-stat-number"><span class="counter">18</span>+</div>
+                                <div class="portfolio-stat-title">Tamamlanan Proje</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="portfolio-stat">
+                                <div class="portfolio-stat-number"><span class="counter">94</span>%</div>
+                                <div class="portfolio-stat-title">Müşteri Memnuniyeti</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="portfolio-stat">
+                                <div class="portfolio-stat-number"><span class="counter">1.2</span>M+</div>
+                                <div class="portfolio-stat-title">Toplam İndirme</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="portfolio-stat">
+                                <div class="portfolio-stat-number"><span class="counter">4.7</span>/5</div>
+                                <div class="portfolio-stat-title">Ortalama Puan</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Interactive Portfolio Gallery -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="portfolio-categories text-center mb-4">
+                        <button class="portfolio-category active" data-filter="*">Tümü</button>
+                        <button class="portfolio-category" data-filter=".e-commerce">E-Ticaret</button>
+                        <button class="portfolio-category" data-filter=".fitness">Sağlık & Fitness</button>
+                        <button class="portfolio-category" data-filter=".travel">Seyahat</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row g-4 portfolio-gallery">
+                <!-- Proje 1 -->
+                <div class="col-lg-4 col-md-6 portfolio-item e-commerce">
+                    <div class="portfolio-card">
+                        <div class="portfolio-img">
+                            <img src="img/portfolio-1.jpg" class="img-fluid w-100" alt="E-Ticaret Uygulaması">
+                            <div class="portfolio-tech-stack">
+                                <span>Flutter</span>
+                                <span>Firebase</span>
+                                <span>Stripe</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-details">
+                            <h5>E-Ticaret Uygulaması</h5>
+                            <div class="project-stats">
+                                <div class="project-stat">
+                                    <i class="fas fa-download"></i>
+                                    <span>250K+</span>
+                                </div>
+                                <div class="project-stat">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.8/5</span>
+                                </div>
+                                <div class="project-stat">
+                                    <i class="fas fa-code-branch"></i>
+                                    <span>85 Commit</span>
+                                </div>
+                            </div>
+                            <p class="text-muted">Tam kapsamlı mobil alışveriş deneyimi sunan e-ticaret uygulaması.</p>
+                            <a href="#" class="portfolio-link">Detayları Görüntüle <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proje 2 -->
+                <div class="col-lg-4 col-md-6 portfolio-item fitness">
+                    <div class="portfolio-card">
+                        <div class="portfolio-img">
+                            <img src="img/portfolio-2.jpg" class="img-fluid w-100" alt="Fitness Takip Uygulaması">
+                            <div class="portfolio-tech-stack">
+                                <span>Flutter</span>
+                                <span>Provider</span>
+                                <span>SQLite</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-details">
+                            <h5>Fitness Takip Uygulaması</h5>
+                            <div class="project-stats">
+                                <div class="project-stat">
+                                    <i class="fas fa-download"></i>
+                                    <span>500K+</span>
+                                </div>
+                                <div class="project-stat">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.6/5</span>
+                                </div>
+                                <div class="project-stat">
+                                    <i class="fas fa-code-branch"></i>
+                                    <span>120 Commit</span>
+                                </div>
+                            </div>
+                            <p class="text-muted">Kapsamlı fitness takip ve beslenme planlama uygulaması.</p>
+                            <a href="#" class="portfolio-link">Detayları Görüntüle <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proje 3 -->
+                <div class="col-lg-4 col-md-6 portfolio-item travel">
+                    <div class="portfolio-card">
+                        <div class="portfolio-img">
+                            <img src="img/portfolio-3.jpg" class="img-fluid w-100" alt="Seyahat Planı Uygulaması">
+                            <div class="portfolio-tech-stack">
+                                <span>Flutter</span>
+                                <span>Google Maps</span>
+                                <span>BLoC</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-details">
+                            <h5>Seyahat Planı Uygulaması</h5>
+                            <div class="project-stats">
+                                <div class="project-stat">
+                                    <i class="fas fa-download"></i>
+                                    <span>320K+</span>
+                                </div>
+                                <div class="project-stat">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.7/5</span>
+                                </div>
+                                <div class="project-stat">
+                                    <i class="fas fa-code-branch"></i>
+                                    <span>95 Commit</span>
+                                </div>
+                            </div>
+                            <p class="text-muted">Konum tabanlı seyahat planlama ve rota takip uygulaması.</p>
+                            <a href="#" class="portfolio-link">Detayları Görüntüle <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-primary rounded-pill">Tüm Projelerimi Görüntüle</a>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio Section End -->
+
+    <!-- Contact Section Start -->
+    <section id="contact" class="contact py-6">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2 class="text-dark">İletişim</h2>
+                <div class="title-bg"></div>
+                <p class="text-muted">Kariyer fırsatları ve iş teklifleri için benimle iletişime geçebilirsiniz</p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="row g-5">
+                        <!-- İletişim Bilgileri -->
+                        <div class="col-lg-5">
+                            <div class="contact-info">
+                                <h3 class="mb-4">İletişim Bilgilerim</h3>
+                                
+                                <div class="contact-item d-flex align-items-center mb-4">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-text">
+                                        <h5>E-posta</h5>
+                                        <p>info@furkan.com</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item d-flex align-items-center mb-4">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div class="contact-text">
+                                        <h5>Telefon</h5>
+                                        <p>+90 555 123 4567</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item d-flex align-items-center mb-4">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="contact-text">
+                                        <h5>Konum</h5>
+                                        <p>İstanbul, Türkiye</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item d-flex align-items-center mb-4">
+                                    <div class="contact-icon">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </div>
+                                    <div class="contact-text">
+                                        <h5>LinkedIn</h5>
+                                        <p><a href="#">linkedin.com/in/mfurkansahin</a></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item d-flex align-items-center">
+                                    <div class="contact-icon">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                    <div class="contact-text">
+                                        <h5>GitHub</h5>
+                                        <p><a href="#">github.com/mfurkansahin</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="availability mt-5">
+                                <h3 class="mb-3">Müsaitlik Durumu</h3>
+                                <div class="availability-status d-flex align-items-center">
+                                    <div class="status-indicator available"></div>
+                                    <p class="mb-0">İş görüşmelerine açığım</p>
+                                </div>
+                                <p class="text-muted mt-2">Uygun pozisyonlar için 2 hafta içinde işe başlayabilirim.</p>
+                                
+                                <!-- Müsaitlik Grafiği -->
+                                <div class="availability-chart-container mt-3">
+                                    <h5 class="text-dark mb-3">Çalışma Kapasitesi</h5>
+                                    <canvas id="availabilityChart" width="400" height="200"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- İletişim Formu -->
+                        <div class="col-lg-7">
+                            <div class="contact-form">
+                                <h3 class="mb-4">Bana Ulaşın</h3>
+                                <form id="contactForm">
+                                    <div class="row g-4">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="name">Ad Soyad *</label>
+                                                <input type="text" id="name" name="name" class="form-control" placeholder="Adınız ve soyadınız" required>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="email">E-posta *</label>
+                                                <input type="email" id="email" name="email" class="form-control" placeholder="E-posta adresiniz" required>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="company">Şirket</label>
+                                                <input type="text" id="company" name="company" class="form-control" placeholder="Şirketiniz">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="position">Pozisyon</label>
+                                                <input type="text" id="position" name="position" class="form-control" placeholder="İş unvanınız">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="subject">Konu *</label>
+                                                <input type="text" id="subject" name="subject" class="form-control" placeholder="Konu" required>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="message">Mesaj *</label>
+                                                <textarea id="message" name="message" class="form-control" rows="5" placeholder="Mesajınız" required></textarea>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-12">
+                                            <div class="form-check mb-3">
+                                                <input type="checkbox" class="form-check-input" id="privacyPolicy" required>
+                                                <label class="form-check-label" for="privacyPolicy">Kişisel verilerimin işlenmesini kabul ediyorum.</label>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary rounded-pill">Mesaj Gönder</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section End -->
+    
+    <!-- Call to Action Start -->
+    <section class="cta py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-9">
+                    <h2 class="text-white mb-3">Ekibinize katılarak değer katmak istiyorum!</h2>
+                    <p class="text-white mb-0">Mobil uygulama geliştirme projelerinizde deneyimim ve yeteneklerimle fark yaratmaya hazırım. En kısa sürede görüşmek dileğiyle.</p>
+                </div>
+                <div class="col-lg-3 text-lg-end mt-4 mt-lg-0">
+                    <a href="#contact" class="btn btn-light rounded-pill py-3 px-4">İletişime Geç</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Call to Action End -->
+
+    <!-- Footer Section Start -->
+    <footer class="footer py-4 text-center">
+        <div class="container">
+            <div class="text-muted">
+                &copy; 2023 Furkan Şahin. Tüm Hakları Saklıdır.
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+    
+    
+
+    <!-- JS Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
-
-    <!-- Template Javascript -->
+    
+    <!-- Main JS -->
     <script src="js/main.js"></script>
+    
+    <!-- Chart.js Kütüphanesi -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
+
+
